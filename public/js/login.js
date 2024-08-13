@@ -5,7 +5,7 @@ document.getElementById('loginForm').addEventListener('submit', async function (
     const password = document.getElementById('password').value;
 
     try {
-        const response = await fetch('http://localhost:3000/login-admin', {
+        const response = await fetch('https://digital-vle.up.railway.app/login-admin', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -16,7 +16,7 @@ document.getElementById('loginForm').addEventListener('submit', async function (
         const data = await response.json();
 
         if (response.ok) {
-            window.location.href = `http://localhost:3000`;
+            window.location.href = `https://digital-vle.up.railway.app`;
         } else {
             alert(data.message);
         };
