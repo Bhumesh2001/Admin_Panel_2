@@ -30,7 +30,7 @@ router.post('/login-admin', (req, res, next) => {
 });
 
 router.get('/login', isLoggedOut, Controller.renderLoginAdmin);
-router.get('/digital-vle', IsAuthenticated, Controller.renderAdminPanel);
+router.get('/', IsAuthenticated, Controller.renderAdminPanel);
 router.post('/upload', upload.single('videoUpload'), Controller.storeVideoInDatabase);
 
 module.exports = router;
