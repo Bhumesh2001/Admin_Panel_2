@@ -59,7 +59,7 @@ document.getElementById('video-form').addEventListener('submit', async function 
         formData.append('videoCategory', category);
         formData.append('videoUrl',videoUrl);
         try {
-            const response = await fetch('http://localhost:3000/upload', {
+            const response = await fetch('https://digital-vle.up.railway.app/upload', {
                 method: 'POST',
                 body: formData,
             });
