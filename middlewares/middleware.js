@@ -44,7 +44,7 @@ exports.IsAuthenticated = (req, res, next) => {
 
 exports.isLoggedOut = (req, res, next) => {
     if (req.isAuthenticated()) {
-        return res.redirect('/digital-vle');
+        return res.redirect('/');
     };
     next();
 };
